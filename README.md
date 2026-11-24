@@ -2,7 +2,7 @@
 
 通过蓝牙连接来使用 Windows 电脑的键盘给 iPhone 打字，并且可以很方便快捷的和iPhone键盘切换。
 
-<img src="docs/images/keyin-window.png" width="495" alt="借键主窗口，蓝色状态栏显示「笔记本正在输入」">
+[![借键主窗口，蓝色状态栏显示「笔记本正在输入」](docs/images/keyin-window-rounded.png)](docs/images/keyin-window-rounded.png)
 
 ## 下载
 
