@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)_temp/obj/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)_temp/bin/</BaseOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);_temp/**/*</DefaultItemExcludes>
+  </PropertyGroup>
+</Project>

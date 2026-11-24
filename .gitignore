@@ -1,0 +1,4 @@
+_temp/
+bin/
+obj/
+*.user
