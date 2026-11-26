@@ -34,6 +34,8 @@ internal sealed partial class DeskSettings
              [_recoveryHint], [Bind(_toggleCleared, "切换原 iPhone 的屏幕键盘", "Toggle the previous iPhone’s onscreen keyboard")],
              [Bind(_notifications, "连接或断开时通知我", "Notify me on connection or disconnection")]]);
         AddSection("语言 / Language", "Language / 语言", null, [[_language]]);
+        AddSection("启动", "Startup", null,
+            [[Bind(_startWithWindows, "开机自启", "Start with Windows")]]);
         AddSection("快捷键", "Global shortcut",
             ("按键录入，或填写组合后保存，例如 Ctrl + I。", "Record a shortcut or type one, such as Ctrl + I, then save."),
             [[_entry, Bind(_apply, "保存", "Save")], [_shortcut, Bind(_defaultKey, "恢复默认", "Restore default")]]);

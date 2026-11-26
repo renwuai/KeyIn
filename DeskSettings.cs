@@ -5,6 +5,7 @@ internal sealed partial class DeskSettings : Form
     private readonly DeskForm _desk;
     private readonly Font _bodyFont, _sectionFont;
     private readonly ComboBox _language = new() { DropDownStyle = ComboBoxStyle.DropDownList };
+    private readonly CheckBox _startWithWindows = new();
     private readonly CheckBox _notifications = new();
     private readonly Button _shortcut = new();
     private readonly TextBox _entry = new();
@@ -36,6 +37,17 @@ internal sealed partial class DeskSettings : Form
         _language.Items.AddRange(["简体中文", "English"]);
         _language.AccessibleName = "语言 / Language";
         _entry.Text = desk.ShortcutLabel;
+        _startWithWindows.Enabled = StartupPreference.TryRead(out bool startsWithWindows);
+        _startWithWindows.Checked = startsWithWindows;
+        if (!_startWithWindows.Enabled)
+            SetFeedback(() => UiLanguage.T("无法读取开机自启设置。", "Could not read the startup setting."));
+        _startWithWindows.Click += (_, _) =>
+        {
+            CancelRecording();
+            if (!StartupPreference.TrySet(_startWithWindows.Checked, out var error))
+                _startWithWindows.Checked = !_startWithWindows.Checked;
+            SetFeedback(error);
+        };
         _notifications.Checked = ConnectionNotifications.Enabled;
         _notifications.Click += (_, _) =>
         {

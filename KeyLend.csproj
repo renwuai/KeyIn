@@ -9,7 +9,7 @@
     <ApplicationIcon>KeyLend.ico</ApplicationIcon>
     <AssemblyName>KeyLend</AssemblyName>
     <Product>KeyIn</Product>
-    <Version>0.1.17</Version>
+    <Version>0.1.18</Version>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
   </PropertyGroup>
   <ItemGroup>
